@@ -89,10 +89,6 @@ def main(_):
     if not tf.gfile.Exists(model_path):
         url = 'http://download.tensorflow.org/models/inception_resnet_v2_2016_08_30.tar.gz'
         dataset_utils.download_and_uncompress_tarball(url, FLAGS.image_dir)
-    if not tf.gfile.Exists(train_dir):
-        tf.gfile.MakeDirs(train_dir)
-    if not tf.gfile.Exists(valid_dir):
-        tf.gfile.MakeDirs(valid_dir)
     if not tf.gfile.Exists(summary_path):
         tf.gfile.MakeDirs(summary_path)
     
