@@ -176,7 +176,7 @@ def main(_):
                     if init%(2*batch_size)==0:
                         feed_dict={x: resize_val, y: truth_val}
                         train_accuracy, cross_entropy_value = sess.run([accuracy, cross_entropy_mean], feed_dict=feed_dict)
-                        print 'Training Accuracy: {}, Training Cross entropy: {}'.format(train_accuracy * 100, cross_entropy_value)
+                        print 'Training Accuracy: {}, Training Cross entropy: {}'.format(train_accuracy * 100.0, cross_entropy_value)
                         
                         resize_val, truth_val = decoded_data(sess,valid_list, 
                                                              range(init,finish), batch_size, 
@@ -186,7 +186,7 @@ def main(_):
                         feed_dict={x: resize_val, y: truth_val}
                         valid_accuracy, valid_cross_entropy_value, validation_summary = sess.run([accuracy, cross_entropy_mean, merged], feed_dict=feed_dict)
                         validation_writer.add_summary(validation_summary, i)
-                        print 'Training Accuracy: {}, Validation Cross entropy: {}'.format(valid_accuracy * 100, valid_cross_entropy_value)
+                        print 'Training Accuracy: {}, Validation Cross entropy: {}'.format(valid_accuracy * 100.0, valid_cross_entropy_value)
   
                
         print 'Finish'
