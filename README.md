@@ -7,5 +7,7 @@ python -c "import tensorflow.contrib.slim as slim; eval = slim.evaluation.evalua
 
 You have to make sure to put the training data in the train folder, the validation data in the test folder
 
-To run the program enter the following comand in your terminal
+To run the program enter the following comand in your terminal:
+
+
 python main.py --image_dir= 'Your training dir'
