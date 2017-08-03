@@ -10,4 +10,4 @@ You have to make sure to put the training data in the train folder, the validati
 To run the program enter the following comand in your terminal:
 
 
-python /'your_dir'/main.py --image_dir= 'Your training dir'
+python /'Your_dir'/main.py --image_dir= 'Your_dir'
