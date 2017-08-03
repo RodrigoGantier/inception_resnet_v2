@@ -11,3 +11,9 @@ To run the program enter the following comand in your terminal:
 
 
 python /'Your_dir'/main.py --image_dir= 'Your_dir'
+
+
+For visualization in tensorboard can run the following command in terminal:
+
+tensorboaf --logdir= /'your_dir'/summary
+
