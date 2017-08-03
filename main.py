@@ -93,7 +93,7 @@ def main(_):
         tf.gfile.MakeDirs(summary_path)
     
     learning_rate = 0.01
-    epoch=5
+    epoch=50
     input_height = 299
     input_width = 299
     input_depth = 3 
