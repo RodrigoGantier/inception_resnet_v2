@@ -187,11 +187,7 @@ def main(_):
                         valid_accuracy, valid_cross_entropy_value, validation_summary = sess.run([accuracy, cross_entropy_mean, merged], feed_dict=feed_dict)
                         validation_writer.add_summary(validation_summary, i)
                         print 'Training Accuracy: {}, Validation Cross entropy: {}'.format(valid_accuracy * 100, valid_cross_entropy_value)
-                        
-                        
-            probabilities = probabilities[0, 0:]
-            sorted_inds = [i[0] for i in sorted(enumerate(-probabilities), key=lambda x:x[1])]
-            print sorted_inds[:5]
+  
                
         print 'Finish'
 
