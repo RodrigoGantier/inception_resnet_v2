@@ -218,10 +218,11 @@ def main(_):
     test_dir = FLAGS.test_dir
     valid_dir = FLAGS.valid_dir
     summary_path = FLAGS.summary_dir
-    os.mkdir(os.path.join(summary_path, "checkpoints"))
+    if not os.path.exists(os.path.join(summary_path, "checkpoints")):
+        os.mkdir(os.path.join(summary_path, "checkpoints"))
     checkpoints_path = os.path.join(summary_path, "checkpoints/inception_resnet_v2.ckpt")
 
-    maybe_download_and_extract(FLAGS.image_dir, data_url)
+    maybe_download_and_extract(FLAGS.model_dir, data_url)
 
     # Look at the folder structure, and create lists of all the images.
     train_list, test_list, valid_list, id_numbers = create_image_lists(train_dir, test_dir, valid_dir)
